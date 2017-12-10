@@ -1,0 +1,124 @@
+body {
+      background-image: url("../images/trivia.jpg");
+      background-position: center center;
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+
+h1,h2 {
+	color: white;
+}
+
+.heading {
+	color: white;
+	font-size: 24px;
+	font: Courier;
+	font-weight: bold;
+	text-align: center;
+}
+.container {
+	position: relative;
+	top: 10px;
+	width: 800px;
+	height: 600px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.innercontainer {
+	position: relative;
+	margin: 20px;
+	width: 600px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.question {
+	position: relative;
+	height: auto;
+	width: 400px;
+	background-color: beige;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;	
+}
+
+
+.trivia {
+	position: relative;
+	height: auto;
+	width: 400px;
+	background-color: blue;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;	
+}
+
+.result {
+	position: relative;
+	height: auto;
+	width: 400px;
+	background-color: gray;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;	
+}
+.choiceBox {
+	position: relative;
+	height: auto;
+	width: 400px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pushButton {
+	height: 35px;
+	width: 400px;
+	background-color: green;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+.goodAnswer {
+	background-color: gray;
+	color: white;
+}
+
+.badAnswer {
+	background-color: red;
+	color: white;
+}
+
+.show-number {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
