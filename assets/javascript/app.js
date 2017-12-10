@@ -9,7 +9,6 @@ var gamesUndecided = 0;
 var gameNo = 0;
 var number = 10;
 var interGameno = 5;
-
 var games = [{
 
       "question": "Name the hit The Rolling Stones song that was written by The Beatles.",
@@ -50,8 +49,13 @@ var games = [{
     ]
 
 var numberOfGames = games.length
+$('.QBox').hide();
+$('.result').hide()
 
-displayGame();
+$(document).on("click", ".startButton", function() {
+    $(".startButton").hide();
+    displayGame();
+})
 
 $(document).on("click", ".pushButton", function(response) {
 
@@ -77,6 +81,7 @@ function displayGame() {
     interGameno = 5;
     gameNo = ((gameNo + 1) -1)  // need to start at zero
 		$('.QBox').empty();
+    $('.QBox').show();
 		$('.result').hide();
 		$('.question').text(games[gameNo].question);
 //		$('.result').text(games[gameNo].trivia);
@@ -94,19 +99,6 @@ function displayGame() {
 
 }
 
-// function questionTimer() {
-//     qtseconds --;
-//     if (qtseconds == 0) {
-//         clearInterval(intervalId);
-//         gameNo ++;
-//         // if(gameNo == 4) {
-//         //    showResults();
-//         // }
-//         //    startGame();
-//         // }
-//     }
-// }
-////////////////////////////////
 // this function sets the timer for the question to be solved
 function run() {
  //     noClicks = true;
@@ -134,17 +126,17 @@ function interGamedec() {
       if (interGameno === 0) {       
           clearInterval(interGame);
           gameNo += 1
-          console≥log(gameNo+" "+numberOfGames)
+
           if(gameNo == numberOfGames) {
               $('.QBox').empty();
-              $('.questions').empty();
+              $('.question').empty();
               $('.result').empty();
               mess = $('<p>');
-              mess.append("Game Over")
-              mess.append("Games Won  "+gamesWon);
-              mess.append("Games Lost "+gamesLost);
+              mess.append("Game Over<br>")
+              mess.append("Games Won  "+gamesWon+"<br>");
+              mess.append("Games Lost "+gamesLost+"<br>");
               mess.append("Games Undecided   "+gamesUndecided)
-              $('.questions').append(mess);
+              $('.question').append(mess);
           } else {
              displayGame()
           }          
@@ -184,6 +176,7 @@ function displayAnswer(mode) {
              $('.result').addClass('goodAnswer');     
              $('.result').append('That is the correct Answer<br>'+games[gameNo].choices[games[gameNo].answer]+"<br>");
              $('.result').show();
+             gamesWon += 1
              break;
              
       }

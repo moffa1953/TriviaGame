@@ -10,6 +10,15 @@ h1,h2 {
 	color: white;
 }
 
+.startButton {
+	text-align: center;
+	color: white;
+	background-color: red;
+	height: 50px;
+	width: 200px;
+	font-size: 14px;
+}
+
 .heading {
 	color: white;
 	font-size: 24px;
