@@ -82,6 +82,7 @@ function displayGame() {
     gameNo = ((gameNo + 1) -1)  // need to start at zero
 		$('.QBox').empty();
     $('.QBox').show();
+    $('.result').empty();
 		$('.result').hide();
 		$('.question').text(games[gameNo].question);
 //		$('.result').text(games[gameNo].trivia);
@@ -159,6 +160,7 @@ function displayAnswer(mode) {
       $('.result').empty();
       switch(mode) {
         case 'un':
+             $('.result').removeClass('goodAnswer');
              $('.result').addClass('badAnswer');
              $('.result').html('Sorry - you ran out of time<br>')
              $('.result').append('The correct answer is<br>'+games[gameNo].choices[games[gameNo].answer]+"<br>");
@@ -166,6 +168,7 @@ function displayAnswer(mode) {
              gamesUndecided += 1;
              break;
         case 'lost':
+             $('.result').removeClass('goodAnswer');
              $('.result').addClass('badAnswer');
              $('.result').html('Sorry - That is not the correct answer<br>')
              $('.result').append('The correct answer is<br>'+games[gameNo].choices[games[gameNo].answer]+"<br>");
@@ -173,6 +176,7 @@ function displayAnswer(mode) {
              gamesLost += 1;
              break;
         case 'won':
+             $('.result').removeClass('badAnswer');
              $('.result').addClass('goodAnswer');     
              $('.result').append('That is the correct Answer<br>'+games[gameNo].choices[games[gameNo].answer]+"<br>");
              $('.result').show();
